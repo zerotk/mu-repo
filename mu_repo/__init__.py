@@ -88,8 +88,8 @@ def SearchConfigDir(start_dir, name='.mu_repo', recurse_limit=20):
             return start_dir
 
         # a .git repository also counts as a config directory so the user can execute plain git commands
-        if os.path.isdir(os.path.join(start_dir, '.git')):
-            return start_dir
+        # if os.path.isdir(os.path.join(start_dir, '.git')):
+        #    return start_dir
 
         parent_dir = os.path.dirname(start_dir)
         if parent_dir == start_dir:
